@@ -1,0 +1,132 @@
+/*全局*/
+
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 15px;
+	font-family: "微软雅黑";
+}
+
+
+/*主体*/
+
+body {
+	border: 0;
+}
+
+
+/*頭部*/
+
+header {
+	color: #337ab7;
+}
+
+.head {
+	margin: auto;
+	width: 70%;
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px solid #eee;
+}
+
+.head a {
+	color: #337ab7;
+	text-decoration: none;
+	margin-right: 10px;
+}
+
+.head a:hover {
+	color: #ddd;
+}
+
+.nleft {
+	float: left;
+}
+
+.nright {
+	float: right;
+}
+
+body button {
+	border-radius: 5px;
+	width: 80px;
+	height: 35px;
+	line-height: 35px;
+}
+
+.content {
+	margin: auto;
+	width: 70%;
+	background-color: #fff;
+}
+
+.logo {
+	width: 100%;
+	height: 200px;
+	background-color: #427098
+}
+
+.btab {
+	list-style: none;
+	border-bottom: 1px solid #aaa;
+	height: 35px;
+	margin-top: 10px;
+}
+
+.btab li {
+	float: left;
+	margin-right: 5px;
+	border-radius: 4px 4px 0 0;
+	border: 1px solid #aaa;
+	height: 34px;
+	line-height: 34px;
+	font-size: 15px;
+	cursor: pointer;
+	width: 120px;
+	text-align: center;
+	background: #ddd;
+	background: -webkit-linear-gradient(top, #aaa, #fff);
+	background: -moz-linear-gradient(top, #aaa, #fff);
+}
+
+.btab .liclick {
+	border-bottom: 1px solid #fff;
+	background: #fff;
+}
+
+
+/*底部*/
+
+footer {
+	background-color: #f4f4f4;
+	position: fixed;
+	width: 100%;
+	bottom: 0px;
+	border-top: 1px solid #eee;
+	background-color: #427098;
+}
+
+.link {
+	width: 70%;
+	margin: auto;
+	line-height: 30px;
+	height: 30px;
+}
+
+footer .gugu {
+	float: right;
+	margin-left: 20px;
+	width: 45px;
+	height: 30px;
+	border: 0;
+	border-radius: 5px;
+	display: inline;
+	background: url(../img/wow/gugu.png);
+	background-size: cover;
+}
+
+footer blockquote {
+	float: right;
+	color: #FFFFFF;
+	font-size: 12px;
+}

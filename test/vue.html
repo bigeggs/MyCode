@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/vue-2.1.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div id="div1">{{message|filterA|filterB}}<br />
+			<span v-bind:title="message" v-if="seen=='ddd'">
+    Hover your mouse over me for a few seconds to see my dynamically bound title!
+  </span>
+			<ul>
+				<li v-for="row in rows" @click="show">{{row.name}}</li>
+			</ul>
+		</div>
+		<div id="example">
+			<p>Original message: "{{ message }}"</p>
+			<p>Computed reversed message: "{{ reversedMessageA}}"</p>
+			<p>methods reversed message: "{{ reversedMessage()}}"</p>
+		</div>
+		<script type="text/javascript">
+			var v1 = new Vue({
+				el: '#div1',
+				data: {
+					message: 'test vue',
+					title: 'span title',
+					seen: "ddd",
+					rows: [{
+						"name": "aaa"
+					}, {
+						"name": "bbb"
+					}, {
+						"name": "ccc"
+					}]
+				},
+				methods: {
+					show: function() {
+						alert(2);
+					}
+				},
+				filters: {
+					filterA: (function(value) {
+						return value + '+filter='
+					}),
+					filterB: function(value) {
+						return value + "ff";
+					}
+				}
+			});
+
+			var v2 = new Vue({
+				el: "#example",
+				data: {
+					message: 'hello'
+				},
+				computed: {
+					reversedMessageA: function() {
+						return Date.now();
+					}
+				},
+				methods: {
+					reversedMessage: function() {
+						return Date.now();
+					}
+				}
+			});
+		</script>
+	</body>
+
+</html>

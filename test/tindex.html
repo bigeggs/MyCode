@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script src="../js/jquery-2.1.4.min.js"></script>
+		<script>
+			"use strict"
+
+			function f1() {
+				console.log("aaa");
+			}
+
+			function f2() {
+				console.log(2);
+			}
+			var callback = $.Callbacks('memory');
+			callback.add(f1);
+			callback.fire();
+			callback.add(f2);
+			//callback.fire();
+		</script>
+	</body>
+
+</html>
