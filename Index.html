@@ -5,11 +5,11 @@
 		<meta charset="UTF-8">
 		<title>诺森德的雪</title>
 		<link rel="icon" href="img/ico.ico" />
-		<link href="css/main.css" type="text/css" rel="stylesheet" />
+		<link href="css/main.css?time"+new Date() type="text/css" rel="stylesheet" />
 	     <script src="js/vue-2.1.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 
-	<body>
+	<body onload="autoheight()"> 
 		<header>
 			<nav class="head">
 				<div class="nleft">
@@ -27,18 +27,18 @@
 		</header>
 		<div class="logo"></div>
 		<div class="content">
-			<div class="panes">
+			<div class="panes" >
 				<div id="tab1">
 					<ol id="list">
 						<li v-for="li in lis">
 							<a :href="li.link">{{li.name}}</a></li>
 					</ol>
 				</div>
-				<div id=" tab2 " style="display: none; ">
-					<iframe src="view/viewer.html " name="viewpart " frameborder="no " scrolling="no " onload="autoheight() " width="100% " height="100% "></iframe>
+				<div id=" tab2 " style="display: none; "  style="min-height: 800px;min-width: 1000px;" >
+					<iframe src="view/viewer.html " frameborder="no " scrolling="no " width="100% " height="100% "></iframe>
 				</div>
-				<div id="tab3 " style="display: none; ">
-					<iframe src="view/imgcut.html " name="viewpart " frameborder="no " scrolling="no " onload="autoheight() " width="100% " height="100% "></iframe>
+				<div id="tab3 " style="display: none; " style="min-height: 800px;min-width: 1000px;" >
+					<iframe src="view/imgcut.html " frameborder="no " scrolling="no " width="100% " height="100% "></iframe>
 				</div>
 			</div>
 		</div>
@@ -61,7 +61,7 @@
 		});
 
 		function autoheight() {
-			$("[name='viewpart' ] ").height(document.documentElement.clientHeight);
+			$("[name='viewpart'] ").height(document.documentElement.clientHeight);
 		}
 		window.onresize = function() {
 			autoheight();
