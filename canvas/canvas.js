@@ -74,8 +74,6 @@ function init() {
 }
 
 function loop() {
-	requestAnimationFrame(loop);
-
 	ctx2.clearRect(0, 0, cw, ch);
 	ctx2.globalCompositeOperation = 'source-over';
 	ctx2.shadowBlur = 0;
@@ -86,6 +84,7 @@ function loop() {
 	ctx2.shadowBlur = 15;
 	ctx2.shadowColor = '#fff';
 	while(i--) {
+		//console.log(i);
 		var part = parts[i];
 
 		part.x += Math.cos(part.angle) * part.vel;
@@ -112,6 +111,7 @@ function loop() {
 
 		part.tick++;
 	}
+	requestAnimationFrame(loop);
 }
 
 function resize() {
