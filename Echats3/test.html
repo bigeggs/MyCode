@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="echart3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body style="background-color: blue;">
+        <canvas id="cav1" width="1000" height="500" style="z-index: -1; float: left;"></canvas>
+		<div id="main" style="width: 1000px; height: 500px; position: absolute;">
+		</div> 
+	</body>
+	<script type="text/javascript">
+		var chat = echarts.init(document.getElementById("main"));
+		var colorsA = ['#606C82', '#4C5870', '#606C82', '#4C5870', '#606C82'];
+		var option = {
+			title: {
+				left: 'center',
+				top: 20,
+				textStyle: {
+					color: '#ccc'
+				}
+			},
+
+			tooltip: {
+				show: false,
+				trigger: 'item',
+				formatter: "{a} <br/>{b} : {c} ({d}%)"
+			},
+
+			visualMap: {
+				show: false,
+				min: 80,
+				max: 600,
+				inRange: {
+					colorLightness: [0, 1]
+				}
+			},
+			series: [
+
+				{
+					type: 'pie',
+					radius: 300,
+					startAngle: 180,
+					center: ['50%', '100%'],
+					data: [{
+						value: 400,
+						name: '直接访问'
+					}, {
+						value: 400,
+						name: '邮件营销'
+					}, {
+						value: 400,
+						name: '联盟广告'
+					}, {
+						value: 400,
+						name: '视频广告'
+					}, {
+						value: 400,
+						name: '搜索引擎'
+					}, {
+						value: 0,
+						name: ''
+					}, {
+						value: 0,
+						name: ''
+					}, {
+						value: 0,
+						name: ''
+					}, {
+						value: 0,
+						name: ''
+					}, {
+						value: 0,
+						name: ''
+					}],
+					hoverAnimation: false,
+					roseType: 'area',
+					label: {
+						normal: {
+							show: false
+						}
+					},
+					labelLine: {
+						normal: {
+							show: false
+						}
+					},
+					itemStyle: {
+						normal: {
+							show: false,
+							color: function(params) {
+								return colorsA[params.dataIndex];
+							},
+							borderColor: 'white',
+							borderWidth: 3,
+							opacity: 0.1
+						}
+					}
+				}, {
+
+					type: 'pie',
+					radius: [251, 251],
+					center: ['50%', '100%'],
+					data: [{
+						value: 0,
+						name: ''
+					}],
+					startAngle: 180,
+					hoverAnimation: false,
+					label: {
+						normal: {
+							show: false
+						}
+					},
+					labelLine: {
+						normal: {
+							show: false
+						}
+					},
+					itemStyle: {
+						normal: {
+							borderColor: 'white',
+							borderWidth: 3,
+							borderType: 'dashed',
+							opacity: 0.1
+						}
+					}
+				}, {
+
+					type: 'pie',
+					radius: [200, 200],
+					startAngle: 180,
+					center: ['50%', '100%'],
+					data: [{
+						value: 0,
+						name: ''
+					}],
+					hoverAnimation: false,
+					label: {
+						normal: {
+							show: false
+						}
+					},
+					labelLine: {
+						normal: {
+							show: false
+						}
+					},
+					itemStyle: {
+						normal: {
+							borderColor: 'white',
+							borderWidth: 3,
+							borderType: 'dashed',
+							opacity: 0.1
+						}
+					}
+				}, {
+
+					type: 'pie',
+					radius: [150, 150],
+					startAngle: 180,
+					center: ['50%', '100%'],
+					data: [{
+						value: 0,
+						name: ''
+					}],
+					hoverAnimation: false,
+					roseType: 'area',
+					label: {
+						normal: {
+							show: false
+						}
+					},
+					labelLine: {
+						normal: {
+							show: false
+						}
+					},
+					itemStyle: {
+						normal: {
+							color: function(params) {
+								return colorsA[params.dataIndex];
+							},
+							borderColor: 'white',
+							borderWidth: 3,
+							borderType: 'dashed',
+							opacity: 0.1
+						}
+					}
+				}, {
+
+					type: 'pie',
+					radius: [100, 100],
+					startAngle: 180,
+					center: ['50%', '100%'],
+					data: [{
+						value: 0,
+						name: ''
+					}],
+					hoverAnimation: false,
+					roseType: 'area',
+					label: {
+						normal: {
+							show: false
+						}
+					},
+					labelLine: {
+						normal: {
+							show: false
+						}
+					},
+					itemStyle: {
+						normal: {
+							color: function(params) {
+								return colorsA[params.dataIndex];
+							},
+							borderColor: 'white',
+							borderWidth: 3,
+							borderType: 'dashed',
+							opacity: 0.1
+						}
+					}
+				}, {
+					name: '访问来源',
+					type: 'pie',
+					radius: 300,
+					startAngle: 180,
+					center: ['50%', '100%'],
+					data: [{
+						value: 335,
+						name: 'aaaaaaaaa'
+					}, {
+						value: 310,
+						name: 'aaaaaaaa'
+					}, {
+						value: 274,
+						name: 'aaaaaaaa'
+					}, {
+						value: 235,
+						name: 'aaaaaaaaaaaaa'
+					}, {
+						value: 400,
+						name: 'bbbbbbbbbb'
+					}, {
+						value: 0,
+						name: 'bbbbbbbbbbb'
+					}, {
+						value: 0,
+						name: 'bbbbbbbbbbb'
+					}, {
+						value: 0,
+						name: 'bbbbbbbbb'
+					}, {
+						value: 0,
+						name: 'bbbbbbbbbb'
+					}, {
+						value: 0,
+						name: 'bbbbbbbbbbbbb'
+					}],
+					roseType: 'area',
+					label: {
+						normal: {
+							show: false,
+							textStyle: {
+								color: 'blue',
+
+							}
+						}
+					},
+					labelLine: {
+						normal: {
+							show: false
+						}
+					},
+					itemStyle: {
+						normal: {
+							color: '#8A8A8A',
+							borderColor: 'white',
+							borderWidth: 0,
+							opacity: 0.4
+						}
+					},
+					animationType: 'scale',
+					animationEasing: 'elasticOut',
+					animationDelay: function(idx) {
+						return Math.random() * 200;
+					}
+				},
+			]
+		};
+		chat.setOption(option);
+		test();
+
+		function test() {
+			var data = ["撒范德萨", "佛塑股份", "减肥但是", "额为我是", "成功大学", "我发的顺风"];
+			var circleData = { x: 500, y: 500, r: 400 };
+			var elm = document.getElementById("cav1");
+
+			if(elm.getContext) {
+				var canvas = elm.getContext('2d');
+				var len = data.length;
+				var dataAngle = Math.PI * 2 / len;
+				//canvas.globalCompositeOperation = 'destination-out';
+				canvas.translate(circleData.x,circleData.y);
+				for(var j = 0; j < len; j++) {
+					var beginAngle = j * dataAngle;
+					var word = data[j];
+					var lens = word.length;
+					for(var i = 0; i < lens; i++) {
+						canvas.save();
+						var letter = word[i];
+						var letterAngle = dataAngle / (lens + 2);
+						var startAngle = beginAngle + i * letterAngle;
+						canvas.fillStyle = 'black';
+						canvas.font = '15px 微软雅黑';
+						canvas.textAlign = 'right';
+						canvas.textBaseline = 'middle';
+						canvas.translate(circleData.r * Math.cos(startAngle), circleData.r * Math.sin(startAngle));
+						canvas.rotate(startAngle + Math.PI / 2);
+						canvas.fillText(letter, 0, 0);
+						canvas.restore();
+					}
+				}
+
+			}
+		}
+	</script>
+
+</html>

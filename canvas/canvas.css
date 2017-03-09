@@ -5,5 +5,5 @@ canvas {
   right: 0;
   top: 0;
 }
-#c1 {opacity: 0;}
-#c2 {background: #000;} 
+#c1 {opacity: 0;z-index: -1;}
+#c2 {background: #000;z-index: -1;} 

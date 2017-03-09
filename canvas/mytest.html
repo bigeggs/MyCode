@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<canvas id="cav1" width="800px" height="600px"></canvas>
+		<script type="text/javascript">
+			var data = ["撒范德萨", "佛塑股份", "减肥但是", "额为我是", "成功大学", "我发的顺风"];
+			var dataColor = ["blue", "red", "blue", "red", "blue", "red"];
+			var circleData = { x: 400, y: 300, r: 100 };
+			var elm = document.getElementById("cav1");
+			if(elm.getContext) {
+				var canvas = elm.getContext('2d');
+				var len = data.length;
+				var dataAngle = Math.PI * 2 / len;
+				canvas.translate(circleData.x,circleData.y);
+				for(var j = 0; j < len; j++) {
+					var beginAngle = j * dataAngle;
+					var word = data[j];
+					var lens = word.length;
+					canvas.beginPath();
+					canvas.moveTo(0,0);
+					canvas.fillStyle =dataColor[j];
+					canvas.arc(0,0, circleData.r, beginAngle, beginAngle + dataAngle, false);
+					canvas.fill();
+					canvas.closePath();
+
+					for(var i = 0; i < lens; i++) {
+						canvas.save();
+						var letter = word[i];
+						var letterAngle = dataAngle / (lens + 2);
+						var startAngle = beginAngle + i * letterAngle;
+						canvas.fillStyle = 'black';
+						canvas.font = '15px 微软雅黑';
+						canvas.textAlign = 'right';
+						canvas.textBaseline = 'middle';
+						canvas.translate(circleData.r * Math.cos(startAngle), circleData.r * Math.sin(startAngle));
+						canvas.rotate(startAngle + Math.PI / 2);
+						canvas.fillText(letter, 0, 0);
+						canvas.restore();
+					}
+				}
+
+			}
+		</script>
+	</body>
+
+</html>

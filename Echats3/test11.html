@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div id="test"></div>
+	</body>
+	<script type="text/javascript">
+		var data = [{
+			name: 'a',
+			num: 1
+		}, {
+			name: 'b',
+			num: 2
+		}, {
+			name: 'c',
+			num: 3
+		}, {
+			name: 'a',
+			num: 4
+		}, {
+			name: 'a',
+			num: 5
+		}];
+		var arr = {};
+		for(var i = 0; i < data.length; i++) {
+			var test=10;
+			var mol = data[i];
+			if(!arr[mol.name]) {
+				arr[mol.name] = new Array();
+				arr[mol.name].push(mol.num);
+			} else {
+				if(!arr[mol.name].indexOf(mol.num)) {
+					arr[mol.name].push(mol.num);
+				}
+			}
+		}
+		console.log(test);
+		console.log(JSON.stringify(arr));
+	</script>
+
+</html>

@@ -9,20 +9,23 @@
 	<body>
 		<script src="../js/jquery-2.1.4.min.js"></script>
 		<script>
-			"use strict"
+			var Arr = ["a", ["b", ["c", "d"]], "e"];
+			var res = [];
 
-			function f1() {
-				console.log("aaa");
-			}
+			function Test(arr) {
+				var i = 0;
+				len = arr.length;
+				for(; i < len; i++) {
+					if(typeof arr[i] == 'object') {
+						Test(arr[i]);
+					} else {
+						res.push(arr[i])
+					}
 
-			function f2() {
-				console.log(2);
+				}
 			}
-			var callback = $.Callbacks('memory');
-			callback.add(f1);
-			callback.fire();
-			callback.add(f2);
-			//callback.fire();
+			Test(Arr);
+			console.log(res)
 		</script>
 	</body>
 

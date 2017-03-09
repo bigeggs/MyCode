@@ -1,0 +1,166 @@
+/* CSS Document */
+/*预设*/
+html, body, div,span, applet, object, iframe, h1, h2, h3, h4, h5,h6, p, blockquote, pre, a, abbr, acronym, address,big, cite, code, del, dfn, em, img, ins, kbd, q,s, samp, small, strike, sub, sup, tt, var, b, u,i, center, dl, dt, dd, ol, ul, li, fieldset, form,label, legend, table, caption, tbody, tfoot,thead, tr, th, td, article, aside, canvas,details, embed, figure, figcaption, footer,header, hgroup, menu, nav, output, ruby, section,summary, time, mark, audio, video{
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+html,body{
+	font-family: "微软雅黑";
+	font-size: 12px;
+	width: 100%;
+	height:100%;
+}
+a{
+	text-decoration: none;
+}
+ul li{
+	list-style: none;
+}
+img{
+	border: none;
+}
+.clearfix:after{
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;				
+	clear: both;
+}
+.clearfix{
+	zoom: 1;
+}
+
+.box{
+	width:100%;
+	min-width: 1200px;
+	background:url(../images/bj.jpg) repeat-y;
+	height:100%;
+}
+.left{
+	width:16%;
+	float:left;
+	height:85%;
+}
+.right{
+	width:80%;
+	float:left;
+	height:85%;
+	margin:0 1.6%;
+	
+}
+.titleBox{
+	background:url(../images/top_bj.jpg) no-repeat;
+	width:100%;
+	height:56px;
+	line-height:56px;
+	display: flex;	
+}
+.logo{
+	width:14%;
+	height:50%;
+	float:left;
+	margin:auto;
+}
+.title{
+	background:url(../images/title_bj.png) no-repeat center center;
+	background-size:100% 10%;
+	text-align:center;
+	width:80%;
+	float:left;
+	color:#51b6d7;
+	font-size:22px;
+}
+.title span{background:#010921;}
+.my{
+	width:2%;
+	height:60%;
+	margin:auto;
+	float:left;
+}
+
+/*swiper*/
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-prev{}
+.data_left{width: 20%;height: 100%;margin-left: 5px;float: left;}
+.data_middle{width: 56%;height: 100%;margin: 0 2%;float: left;}
+.data_right{width: 20%;height: 100%;margin-right: 5px;float: left;}
+.zhong_left{width: 100%;height: 34%;}
+.tel_left{width: 100%;height: 21%;}
+.guanjian_left{width: 100%;height: 40%;}
+.data_bor{border: 1px solid #203f5f;background: rgba(86,182,213,0.1);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#1956b6d5,endColorstr=#1956b6d5);position: relative;margin-bottom: 5%;}
+.bor_left{width: 17px;height: 17px;position: absolute;left: -5px;bottom: -5px;background: url(../images/leftbor.png) no-repeat;}
+.bor_right{width: 17px;height: 17px;position: absolute;right: -5px;bottom: -5px;background: url(../images/rigbor.png) no-repeat;}
+
+.data_title{font-size: 16px;color: #FFFFFF;padding-left: 10px;height: 44px;text-align: left;line-height: 44px;background: url(../images/titlebg.png) no-repeat 100% 100%;background-size: cover;}
+.zhong_charts{height: 75%;overflow: hidden;}
+.zhong_charts1{height: 86%;overflow: hidden;}
+.zhong_charts2{height: 76%;overflow: hidden;}
+.zhong_count{position: absolute;right: 15px;bottom: 2px;}
+.zhong_count p{float: left;font-size: 14px;height: 32px;line-height: 32px;}
+.zhong_count1{color: #1cd97f;background: url(../images/pc.png) no-repeat left center;margin-right: 10px;padding-left: 30px;}
+.zhong_count2{color: #1cd97f;background: url(../images/phone.png) no-repeat left center;padding-left: 26px;}
+
+.count_middle{width: 100%; height: 21%;margin-bottom: 2%;}
+.count_thr{width: 33%;height: 100%;float: left;position: relative;}
+.count_thr_img{width: 48%;height: 52%;position: absolute;left: 25%; top: 20%;}
+.count_bg{width: 48%;position: absolute;left: 25%;top: 10%;}
+.count_icon{width: 14%;position: absolute;top: 30%;left: 50%;transform: translateX(-50%);}
+.count_icon1{width: 15%;}
+.count_icon2{width: 16%;}
+.count_num{text-align: center;font-size: 26px;color: #04eff5;position: absolute;bottom: 0;width: 100%;}
+
+.user_middle{width: 100%;height: 53%;border: 1px solid #203f5f;position: relative;}
+.user_search{position: absolute;right: 0;bottom: 20px;z-index: 10;}
+.zhedie1{float: left;background: url(../images/zhedie2.png) no-repeat;background-size: cover;width: 16px;height: 136px;cursor: pointer;}
+.zhedie2{float: left;background: url(../images/zhedie1.png) no-repeat;background-size: cover;width: 16px;height: 136px;cursor: pointer;}
+.user_search ul{border: 1px solid #0f5698;background: #14203e;width: 125px;float: left;padding-left: 8px;}
+.user_search li{height: 27px;font-size: 14px;line-height: 27px;padding-left: 16px;text-align: left;}
+.zhe_text1{color: #fa8354;background: url(../images/circle1.png) no-repeat left center;}
+.zhe_text2{color: #4cafd0;background: url(../images/circle2.png) no-repeat left center;}
+.zhe_text3{color: #6cc788;background: url(../images/circle3.png) no-repeat left center;}
+.zhe_text4{color: #d1725e;background: url(../images/circle4.png) no-repeat left center;}
+.zhe_text5{color: #9c64b5;background: url(../images/circle5.png) no-repeat left center;}
+.user_box{height: 89%;}
+
+
+.hot_middle{width: 100%;height: 20%;margin-top: 3%;position: relative;background: rgba(86,182,213,0.1);}
+.data_title1{position: absolute;left: 0;top: 0;background: url(../images/titlebj1.png) no-repeat;width: 103px; height: 33px;line-height: 33px;color: #FFFFFF;padding-left:10px;font-size: 16px;text-align: left;z-index: 10;}
+.hot_box{height: 100%;}
+
+.loop_right{width:100%; height: 32%;}
+.loop_box{height: 83%;overflow: hidden;}
+.goods_right{width:100%; height: 32%;}
+.goods_box{height: 83%;overflow: hidden;}
+.like_right{width:100%; height: 31%;position: relative;}
+.text_scroll{height: 22px;position: absolute;bottom: 14px;left: 50%;margin-left: -64px;width: 128px;z-index: 10;}
+.text_scroll span{position: absolute;top: 50%;margin-top: -11px;cursor: pointer;width: 13px;height: 21px;}
+.scroll_left{left: 0;background: url(../images/scrleft.png) no-repeat;}
+.scroll_right{right: 0;background: url(../images/scright.png) no-repeat;}
+.scrollBox{width: 102px;height: 22px; position: absolute;left: 13px;overflow: hidden;}
+.scrollBox ul{position: absolute;left: 0;}
+.scrollBox li{width: 102px;text-align: center;float: left;font-size: 16px;color: #57b3cd;height: 22px;line-height: 22px;}
+.like_data{height: 82%;position: relative;overflow: hidden;}
+.lide_user{position:absolute;left: 40%;top: 35%; width: 20%;}
+.data_plus{width: 100%;height: 100%;}
+
+.img_test{width: 100%;}

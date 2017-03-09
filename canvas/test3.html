@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<style>
+			body {
+				margin: 0px;
+				padding: 0px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<canvas id="myCanvas" width="578" height="200"></canvas>
+		<script>
+			window.requestAnimFrame = (function(callback) {
+				return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+					function(callback) {
+						window.setTimeout(callback, 1000 / 60);
+					};
+			})();
+
+			function drawRectangle(myRectangle, context) {
+				context.beginPath();
+				context.arc(myRectangle.x, myRectangle.y, myRectangle.raduis, myRectangle.startAngle,myRectangle.endAngle);
+				context.fillStyle = '#8ED6FF';
+				context.fill();
+			}
+
+			function animate(myRectangle, canvas, context, startTime) {
+				// update
+				var time = (new Date()).getTime() - startTime;
+
+				var linearSpeed = 100;
+				// pixels / second
+				var newX = linearSpeed * time / 1000;
+
+				if(newX < canvas.width - myRectangle.width - myRectangle.borderWidth / 2) {
+					myRectangle.x = newX;
+				}
+
+				// clear
+				context.clear();
+
+				drawRectangle(myRectangle, context);
+
+				// request new frame
+				requestAnimFrame(function() {
+					animate(myRectangle, canvas, context, startTime);
+				});
+			}
+			var canvas = document.getElementById('myCanvas');
+			var context = canvas.getContext('2d');
+
+			var myRectangle = {
+				x: 0,
+				y: 75,
+				raduis: 100,
+				startAngle: Math.PI*180/180,
+				endAngel:  Math.PI*300/180,
+			};
+			drawRectangle(myRectangle, context);
+
+			// wait one second before starting animation
+			setTimeout(function() {
+				var startTime = (new Date()).getTime();
+				animate(myRectangle, canvas, context, startTime);
+			}, 1000);
+		</script>
+	</body>
+
+</html>
