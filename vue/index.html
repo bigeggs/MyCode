@@ -1,9 +1,30 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-	</head>
-	<body>
-	</body>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<div id="app">fdsfsdf</div>
+
+<body>
+    <script src="../js/ZFrame.js"></script>
+</body>
+<script>
+    var Frame = {
+        formmater: function() {
+            var args = Array.prototype.slice.call(arguments);
+            var replaceStr = args.shift();
+            if (typeof replaceStr == 'string') {
+                return replaceStr.replace(/{(\d+)}/, function(str, num) {
+                    return args[num] || '';
+                });
+            }
+            return replaceStr;
+
+        }
+    }
+    console.log(Frame.formmater("dsfsad{0}fsdf", "法第三十"))
+</script>
+
 </html>

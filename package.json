@@ -1,0 +1,26 @@
+{
+  "name": "zhaoxin",
+  "version": "1.0.0",
+  "description": "for node",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "mongodb": "^2.2.25"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bigeggs/MyCode.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bigeggs/MyCode/issues"
+  },
+  "homepage": "https://github.com/bigeggs/MyCode#readme"
+}
