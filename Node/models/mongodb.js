@@ -33,22 +33,22 @@ function DB() {
         })
 
     };
-    this.Update = function(coltname, query, field, options, callback) {
+    this.Update = function(coltname, filter, update, options, callback) {
         Clinet.connect(connstr, function(error, mgdb) {
             if (error) { console.log(frame.format('mongodb connect error:', error.message)); return }
             var collection = mgdb.collection(coltname);
-            return collection.update(query, field, options, function(error, result) {
+            return collection.update(filter, update, options, function(error, result) {
                 if (error) { console.log(frame.format('mongodb connect error:', error.message)); return }
                 callback(result);
             })
         })
 
     };
-    this.Remove = function(coltname, query, sigle, callback) {
+    this.Remove = function(coltname, selector, options, callback) {
         Clinet.connect(connstr, function(error, mgdb) {
             if (error) { console.log(frame.format('mongodb connect error:', error.message)); return }
             var collection = mgdb.collection(coltname);
-            return collection.remove(query, sigle, function(error, result) {
+            return collection.remove(selector, options, function(error, result) {
                 if (error) { console.log(frame.format('mongodb connect error:', error.message)); return }
                 callback(result);
             })
