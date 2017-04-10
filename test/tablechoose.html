@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/jquery-2.1.4.min.js"></script>
+</head>
+
+<body>
+    <input type="text" id='txt1'><button onclick="choose()">选中</button>
+    <table id='tb'>
+        <tr>
+            <td>1</td>
+            <td>aaa</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>bbb</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>aaa</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>bbb</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>bbb</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>ccc</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>ccc</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>ccc</td>
+        </tr>
+
+    </table>
+    <script>
+        function choose() {
+            var txt = $('#txt1').val();
+            $('#tb tr').each(function(index, tr) {
+                var col = $(tr).find('td').eq(1).text();
+                if (txt == col) {
+                    $(tr).css('background', 'red');
+                }
+            })
+        }
+    </script>
+
+
+</body>
+
+</html>

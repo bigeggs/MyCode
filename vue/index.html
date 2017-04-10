@@ -5,26 +5,35 @@
     <meta charset="UTF-8">
     <title></title>
 </head>
-<div id="app">fdsfsdf</div>
+<div id="app">
+    <input v-model="enterinput" v-on:keyup.enter="addli" placeholder="wirte li info">
+    <ul>
+        <li is='tem-li' v-for="(li,index) in lis" v-bind:litext="li" v-on:remove="lis.splice(index,1)"></li>
+    </ul>
+</div>
 
 <body>
-    <script src="../js/ZFrame.js"></script>
-</body>
-<script>
-    var Frame = {
-        formmater: function() {
-            var args = Array.prototype.slice.call(arguments);
-            var replaceStr = args.shift();
-            if (typeof replaceStr == 'string') {
-                return replaceStr.replace(/{(\d+)}/, function(str, num) {
-                    return args[num] || '';
-                });
+    <script src="../js/vue-2.2.0.js"></script>
+    <script>
+        Vue.component('tem-li', {
+            props: ['litext'],
+            template: '<li>{{litext}}<button v-on:click="$emit(\'remove\')">X</button></li>'
+        })
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                enterinput: '',
+                lis: ['list1', 'gist2', 'fosrs2']
+            },
+            methods: {
+                addli: function() {
+                    this.lis.push(this.enterinput);
+                    this.enterinput = '';
+                }
             }
-            return replaceStr;
+        });
+    </script>
+</body>
 
-        }
-    }
-    console.log(Frame.formmater("dsfsad{0}fsdf", "法第三十"))
-</script>
 
 </html>
