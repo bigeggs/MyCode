@@ -1,85 +1,90 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<meta charset="UTF-8">
-		<title>诺森德的雪</title>
-		<link rel="icon" href="img/ico.ico" />
-		<link href="css/main.css" type="text/css" rel="stylesheet" />
-		<link rel="stylesheet" type="text/css" href="canvas/canvas.css"/>
-	     <script src="js/vue-2.1.js" type="text/javascript" charset="utf-8"></script>
-	</head>
+<head>
+    <meta charset="UTF-8">
+    <title>诺森德的雪</title>
+    <link rel="icon" href="img/ico.ico" />
+    <link href="css/main.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="canvas/canvas.css" />
+    <script src="js/vue-2.1.js" type="text/javascript" charset="utf-8"></script>
+</head>
 
-	<body onload="autoheight()"> 
-		
-		<canvas id="c1"></canvas>
-		<canvas id="c2"></canvas>
-		<header>
-			<nav class="head">
-				<div class="nleft">
-					<a href="#">欢迎来到逗比联盟!</a>
-					<a href="Back.html">吃瓜群众1号</a>
-				</div>
-				<div class="nright">
-					<ul class="btab">
-						<li class="liclick">主页</li>
-						<li>图片展示</li>
-						<li>截取</li>
-					</ul>
-				</div>
-			</nav>
-		</header>
-		<div class="logo"></div>
-		<div class="content">
-			<div class="panes" >
-				<div id="tab1">
-					<ol id="list">
-						<li v-for="li in lis">
-							<a :href="li.link">{{li.name}}</a></li>
-					</ol>
-				</div>
-				<div id=" tab2 " style="display: none; "  style="min-height: 800px;min-width: 1000px;" >
-					<iframe src="view/viewer.html " frameborder="no " scrolling="no " width="100% " height="100% "></iframe>
-				</div>
-				<div id="tab3 " style="display: none; " style="min-height: 800px;min-width: 1000px;" >
-					<iframe src="view/imgcut.html " frameborder="no " scrolling="no " width="100% " height="100% "></iframe>
-				</div>
-			</div>
-		</div>
-		<footer>
-			<div class="link ">
-				<div class="gugu "></div>
-				<blockquote>我被迫卖萌一万年，又被逐出了幻化的行列，现在还要沦为别人的坐骑，你们这是自寻死路—————咕咕</blockquote>
-			</div>
+<body onload="autoheight()">
 
-		</footer>
-	</body>
-	<script type="text/javascript " src="js/jquery-2.1.4.min.js "></script>
-	     <script src="canvas/canvas.js" type="text/javascript" charset="utf-8"></script>
-	<script>
-		$(function() {
-			$(".btab li ").click(function() {
-				$(this).addClass("liclick ").siblings().removeClass("liclick ");
-				$(".panes div[id^='tab' ]:eq( " + $(this).index() + ") ").show().siblings().hide();
-			});
-		});
+    <canvas id="c1"></canvas>
+    <canvas id="c2"></canvas>
+    <header>
+        <nav class="head">
+            <div class="nleft">
+                <a href="#">欢迎来到逗比联盟!</a>
+                <a href="Back.html">吃瓜群众1号</a>
+            </div>
+            <div class="nright">
+                <ul class="btab">
+                    <li class="liclick">主页</li>
+                    <li>图片展示</li>
+                    <li>截取</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="logo"></div>
+    <div class="content">
+        <div class="panes">
+            <div id="tab1">
+                <ol id="list">
+                    <li v-for="li in lis">
+                        <a :href="li.link">{{li.name}}</a></li>
+                </ol>
+            </div>
+            <div id=" tab2 " style="display: none; " style="min-height: 800px;min-width: 1000px;">
+                <iframe src="view/viewer.html " frameborder="no " scrolling="no " width="100% " height="100% "></iframe>
+            </div>
+            <div id="tab3 " style="display: none; " style="min-height: 800px;min-width: 1000px;">
+                <iframe src="view/imgcut.html " frameborder="no " scrolling="no " width="100% " height="100% "></iframe>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="link ">
+            <div class="gugu "></div>
+            <blockquote>我被迫卖萌一万年，又被逐出了幻化的行列，现在还要沦为别人的坐骑，你们这是自寻死路—————咕咕</blockquote>
+        </div>
 
-		function autoheight() {
-			$("[name='viewpart'] ").height(document.documentElement.clientHeight);
-		}
-		window.onresize = function() {
-			autoheight();
-		}
-		var v1= new Vue({
-			el:"#list",
-			data:{
-				lis:[{'name':'BootStrap学习','link':'bootstrap/index.html'},
-				{'name':'JQ学习','link':'jq/index.html'},
-				{'name':'Vue.js学习','link':'vue/index.html'},
-				]
-			}
-		}
-		);
-	</script>
+    </footer>
+</body>
+<script type="text/javascript " src="js/jquery-2.1.4.min.js "></script>
+<script src="canvas/canvas.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    $(function() {
+        $(".btab li ").click(function() {
+            $(this).addClass("liclick ").siblings().removeClass("liclick ");
+            $(".panes div[id^='tab' ]:eq( " + $(this).index() + ") ").show().siblings().hide();
+        });
+    });
+
+    function autoheight() {
+        $("[name='viewpart'] ").height(document.documentElement.clientHeight);
+    }
+    window.onresize = function() {
+        autoheight();
+    }
+    var v1 = new Vue({
+        el: "#list",
+        data: {
+            lis: [{
+                'name': 'BootStrap学习',
+                'link': 'bootstrap/index.html'
+            }, {
+                'name': 'JQ学习',
+                'link': 'jq/index.html'
+            }, {
+                'name': 'Vue.js学习',
+                'link': 'vue/index.html'
+            }, ]
+        }
+    });
+</script>
 
 </html>
