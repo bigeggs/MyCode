@@ -1,0 +1,12 @@
+h1 {
+    color: red;
+}
+
+.div {
+    width: 500px;
+    height: 400px;
+}
+
+.kind1 {
+    background: white url(../public/images/67c7099121497e6c.backgroud.png) no-repeat;
+}
