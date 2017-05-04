@@ -1,11 +1,24 @@
 {
+<<<<<<< HEAD
   "name": "zx",
   "version": "1.0.0",
   "description": "webpack use test",
+=======
+  "name": "zhaoxin",
+  "version": "1.0.0",
+  "description": "for node",
+>>>>>>> fa51b8a64d5d60c921d2972e2ba7df50739b7a85
   "main": "index.js",
   "directories": {
     "test": "test"
   },
+<<<<<<< HEAD
+=======
+  "dependencies": {
+    "mongodb": "^2.2.25"
+  },
+  "devDependencies": {},
+>>>>>>> fa51b8a64d5d60c921d2972e2ba7df50739b7a85
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,11 +26,16 @@
     "type": "git",
     "url": "git+https://github.com/bigeggs/MyCode.git"
   },
+<<<<<<< HEAD
   "author": "zzxx",
+=======
+  "author": "",
+>>>>>>> fa51b8a64d5d60c921d2972e2ba7df50739b7a85
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bigeggs/MyCode/issues"
   },
+<<<<<<< HEAD
   "homepage": "https://github.com/bigeggs/MyCode#readme",
   "devDependencies": {
     "css-loader": "^0.28.1",
@@ -31,4 +49,7 @@
     "url-loader": "^0.5.8",
     "webpack": "^2.4.1"
   }
+=======
+  "homepage": "https://github.com/bigeggs/MyCode#readme"
+>>>>>>> fa51b8a64d5d60c921d2972e2ba7df50739b7a85
 }
