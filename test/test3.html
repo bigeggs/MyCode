@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var testArr = [5, 4, 7, 145, 2, 4, 1, 58, 4, 56, 4, 5, 1, 5, 7, 4, 5, 6, 4];
+
+        function qulickSort(arr) {
+            if (Object.prototype.toString.call(arr) == "[object Array]") {
+                if (arr.length <= 1) {
+                    return arr;
+                }
+                var mid = Math.floor(arr.length / 2),
+                    leftArr = [],
+                    rightArr = [];
+                var midValue = arr.splice(mid, 1)[0];
+                for (var i = 0, len = arr.length; i < len; i++) {
+                    if (arr[i] <= midValue) {
+                        leftArr.push(arr[i]);
+                    } else {
+                        rightArr.push(arr[i]);
+                    }
+                }
+                return qulickSort(leftArr).concat(midValue, qulickSort(rightArr));
+
+            } else {
+                console.error("输入参数不为数组")
+            }
+        }
+        //console.log(qulickSort(testArr).toString());
+        testArr = [4, 2, 3, 6, 9, 8, 5, 7, 1, 55, 14, 22, 13];
+
+        function GetIndexA(arr, val) {
+            if (Object.prototype.toString.call(arr) == "[object Array]") {
+                var begin = 0,
+                    end = arr.length;
+
+                while (begin <= end) {
+                    var mid = Math.floor((end + begin) / 2);
+                    if (arr[mid] == val) {
+                        return mid;
+                    } else if (arr[mid] > val) {
+                        end = mid - 1;
+                    } else if (arr[mid] < val) {
+                        begin = mid + 1;
+                    } else {
+                        return -1;
+                    }
+                }
+            }
+        }
+
+        function GetIndexB(arr, val, b, e) {
+            if (Object.prototype.toString.call(arr) == "[object Array]") {
+                var begin = b || 0,
+                    end = e || arr.length;
+                var mid = Math.floor((end + begin) / 2);
+                if (arr[mid] == val) {
+                    return mid;
+                } else if (arr[mid] > val) {
+                    return GetIndexB(arr, val, begin, mid - 1);
+                } else if (arr[mid] < val) {
+                    return GetIndexB(arr, val, mid + 1, end);
+                } else {
+                    return -1;
+                }
+            }
+
+        }
+        // var newtest = qulickSort(testArr);
+        // console.log(newtest);
+        // console.log(GetIndexB(newtest, 8))
+
+
+        var testStr = "fsdfdsaffdsfdgfdhfdsafdsfadsafcxewqrdfzfdsafdsfdfdsagfdsfafdsaf";
+
+        function GetMaxCount(str) {
+            var dataobj = {};
+            for (var i = 0, len = str.length; i < len; i++) {
+                var val = str[i];
+                if (dataobj[val] && dataobj[val].text == val) {
+                    dataobj[val].count += 1;
+                } else {
+                    dataobj[val] = {};
+                    dataobj[val].text = val;
+                    dataobj[val].count = 1;
+                }
+            }
+            return dataobj;
+        }
+
+        var tes = GetMaxCount(testStr);
+        console.log(GetMaxCount(testStr))
+    </script>
+</body>
+
+</html>

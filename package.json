@@ -1,0 +1,25 @@
+{
+  "name": "zx",
+  "version": "1.0.0",
+  "description": "webpack use test",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bigeggs/MyCode.git"
+  },
+  "author": "zzxx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bigeggs/MyCode/issues"
+  },
+  "homepage": "https://github.com/bigeggs/MyCode#readme",
+  "devDependencies": {
+    "webpack": "^2.4.1"
+  }
+}

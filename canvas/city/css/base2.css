@@ -1,0 +1,393 @@
+/* CSS Document */
+/*预设*/
+html, body, div,span, applet, object, iframe, h1, h2, h3, h4, h5,h6, p, blockquote, pre, a, abbr, acronym, address,big, cite, code, del, dfn, em, img, ins, kbd, q,s, samp, small, strike, sub, sup, tt, var, b, u,i, center, dl, dt, dd, ol, ul, li, fieldset, form,label, legend, table, caption, tbody, tfoot,thead, tr, th, td, article, aside, canvas,details, embed, figure, figcaption, footer,header, hgroup, menu, nav, output, ruby, section,summary, time, mark, audio, video{
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+html,body{
+	font-family: "微软雅黑";
+	font-size: 12px;
+	width: 100%;
+	height:100%;
+	overflow: hidden;
+}
+a{
+	text-decoration: none;
+}
+ul li{
+	list-style: none;
+}
+img{
+	border: none;
+}
+.clearfix:after{
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;				
+	clear: both;
+}
+.clearfix{
+	zoom: 1;
+}
+
+.box{
+	width:100%;
+	min-width: 1200px;
+	background:url(../images/bj.jpg) repeat-y;
+	height:100%;
+}
+.left{
+	width:16%;
+	float:left;
+}
+.right{
+	width:80%;
+	float:left;
+	height:85%;
+	margin:0 1.6%;
+	
+}
+.titleBox{
+	background:url(../images/top_bj.jpg) no-repeat;
+	width:100%;
+	height:56px;
+	line-height:56px;
+	display: flex;	
+}
+.logo{
+	width:13%;
+	height:50%;
+	float:left;
+	margin:auto;
+}
+.title{
+	background:url(../images/title_bj.png) no-repeat center center;
+	background-size:100% 10%;
+	text-align:center;
+	width:80%;
+	float:left;
+	color:#51b6d7;
+	font-size:22px;
+}
+.title span{background:#010921;}
+.my{
+	width:36px;
+	height:36px;
+	margin:auto;
+	float:left;
+}
+
+/*侧导航*/
+.nav_ce p{
+	font-size:18px;
+	color:#fff;
+	background:rgba(81,182,215,0.2);
+	height:46px;
+	line-height:46px;
+	position:relative;
+}
+.zhankai{
+	background:url(../images/left_icon.png) no-repeat;
+	width:6px;
+	height:46px;
+	display:block;
+	background-size:100% 100%;
+	position:absolute;
+	left:0;top:0;
+	display:none;
+}
+.xiala{
+	background:url(../images/add.png) no-repeat;
+	width:15px;
+	height:15px;
+	display:block;
+	top:15px;
+	right:20px;
+	position:absolute;
+	
+}
+.nav_ce>li{
+	margin-bottom:2px;
+	text-indent:10%;
+}
+.nav_ce ul{
+	display:none;
+}
+.nav_ce ul li{
+	border-bottom: 1px solid #1e3e5d;
+	height:42px;
+	line-height:42px;
+	font-size:16px;
+	color:#51b5d7;
+}
+.nav_ce ul li:nth-last-child(1){
+	border:none;
+}
+/*时间*/
+.tuozhuai{
+	position:absolute;
+	top:15px;
+	right:80px;
+	cursor: pointer;
+	background:#020a23;
+	width:313px;
+	border:1px solid #7ad2df;
+	border-right:none;
+}
+.tuozhuai li{
+	height:28px;
+	line-height:28px;
+	padding:0 14px;
+	font-size:14px;
+	float:left;
+	color:#7ad2df;
+	border-right:1px solid #7ad2df;
+}
+.tuozhuai li.on{
+	background:#7ad2df;
+	color:#020a23;
+	
+}
+
+/*右侧*/
+.title_fen{
+	background:url(../images/title_bj_fen.png) repeat-y;
+	background-size:100% 100%;
+	height:44px;
+	width:100%;
+	line-height:44px;
+	color: #fff;
+	font-size:18px;
+	text-indent:17px;
+}
+.border_fen{
+	border:1px solid #1f3e5f;
+	position:relative;	
+	background:rgba(81,182,215,0.1);
+}
+.leftbor{
+	position:absolute;
+	background: url(../images/leftbor.png) no-repeat;
+	display:block;
+	height:17px;
+	width:17px;
+	left:-4px;
+	bottom:-4px;
+}
+.rightbor{
+	position:absolute;
+	background: url(../images/rigbor.png) no-repeat;
+	display:block;
+	height:17px;
+	width:17px;
+	right:-4px;
+	bottom:-4px;
+}
+.num_jiankong{
+	width:77%;
+	height:90%;
+	margin-bottom:2%;
+	float:left;
+}
+.loupan_jiankong{
+	width:20%;
+	height:90%;
+	margin-bottom:2%;
+	float:right;
+}
+.look_jiankong{
+	width:21.5%;
+	float:left;
+	height:100%;
+}
+.center_box{
+	width:20.8%;
+	height:100%;
+	float:left;
+}
+.pianhao,.key{
+	width:100%;
+	height:49%;
+	margin-left:5%;
+}
+.key{
+	margin-top:2.5%;
+}
+.num_jiance{
+	width:55.24%;
+	height:100%;
+	float:right;
+}
+
+/*分块内容*/
+.tu{
+	display:block;
+	width:96%;
+	margin:auto;
+}
+.quxiantu{
+	height:80%;
+}
+.quxiantu div{
+	width:22.6%;
+	float:left;
+	height:29%;
+	margin:1% 0.5% 0 1.5%;
+	border:1px solid #275273;
+	background:rgba(81,182,215,0.1);
+}
+.icon_left{
+	background-color: rgba(81,182,215,0.2);
+	float:left;
+	width:40%;
+	height:100%;
+}
+.shuju_right{
+	float:left;
+}
+.fangke .icon_left{
+	background-image: url(../images/fangke.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 40% 60%;
+}
+.look .icon_left{
+	background-image: url(../images/look.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 40% 53%;
+}
+.phone .icon_left{
+	background-image: url(../images/phone1.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 45% 55%;
+}
+.liaotian .icon_left{
+	background-image: url(../images/liaotian.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 45% 55%;
+}
+.shuju_right{
+	width:60%;
+	text-align:center;
+	margin:7% auto 0;
+}
+.shuju_right span{
+	color:#fff;
+	font-size: 14px;
+	display:block;
+}
+.shuju_right span a{
+	font-size:24px;
+}
+.shuju_right span.name_title{
+	color:#50b5d6;
+}
+.saomiao{
+	width:80%;
+	margin:10% auto 0;
+}
+.saomiao img{
+	width:100%;
+}
+
+.sousuo{
+	border:1px solid #508a9e;
+	width:86%;
+	margin:5% auto 0;
+	height:40%;
+	position:relative;
+}
+.top_r{
+	position:absolute;
+	background:url(../images/juxing_shang.png) no-repeat;
+	height:8px;width:97px;
+	display:block;
+	right:-1px;
+	top:-8px;
+}
+.bottom_l{
+	position:absolute;
+	background:url(../images/juxing_xia.png) no-repeat;
+	height: 5px;width:41px;
+	display:block;
+	bottom:-5px;
+	left:-1px;
+}
+.num_ss{
+	margin:5px 0 0 3px;
+	font-size:28px;
+	color:#51b6d7;
+	background:url(../images/sijiao.png) no-repeat center center;
+	float:left;
+	width:28%;
+	text-align:center;
+	height:36px;
+	background-size:100% 100%;
+}
+.num_nm{
+	color:#51b6d7;
+	font-size:16px;
+	float:right;
+	margin:1px 8px 0 0;
+}
+.ss_w{
+	position:absolute;
+	bottom:0;
+	width:90%;
+	left:50%;
+	margin:0 0 0 -45%;
+	display:block;
+}
+.pianhao{
+	overflow:hidden;
+}
+.xihao_tu{
+	width:100%;
+}
+.key{
+	position:relative;
+}
+.key_tu{
+	width:100%;
+	position: absolute;
+	bottom:0;
+	left:0;
+}
+.map_tu{
+	width:100%;
+	height:90.8%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
